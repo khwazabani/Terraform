@@ -4,8 +4,8 @@ pipeline{
    environment {
         AZURE_CLIENT_ID       = credentials('azure_client_id')
         AZURE_CLIENT_SECRET   = credentials('azure_client_secret')
-        AZURE_TENANT_ID       = credentials('azure_tenant_id')
-        AZURE_SUBSCRIPTION_ID = credentials('azure_subscription_id')
+        AZURE_TENANT_ID       = '898e31b6-cc6b-4856-a587-779c547ed82c'
+        AZURE_SUBSCRIPTION_ID = '9ca7ece4-64fe-4731-8893-7fd7b4dbd60b'
     }
 
   stages {
