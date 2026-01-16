@@ -9,7 +9,16 @@ pipeline{
     }
 
   stages {
-
+    stage('Login to Azure') { 
+      steps { 
+        sh ''' 
+        az login --service-principal \
+        -u $AZURE_CLIENT_ID \ 
+        -p $AZURE_CLIENT_SECRET \ 
+        --tenant $AZURE_TENANT_ID 
+        ''' 
+      }
+    }
    stage('clone project') {
       steps {
            git branch:'master', url:'https://github.com/khwazabani/Terraform.git'
