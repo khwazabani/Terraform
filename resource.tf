@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "jenkins-tf-bani"
+  name     = "jenkins-tf-rg"
   location = "central india"
 }
 
@@ -42,7 +42,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   admin_ssh_key {
     username   = "azureuser"
-    public_key = file("terraform/ssh/id_rsa.pub")
+    public_key = file("/home/khwazabani/ssh/id_rsa.pub")
   }
 
   os_disk {
