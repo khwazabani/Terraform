@@ -11,7 +11,7 @@ pipeline{
     ARM_TENANT_ID         = credentials('azure_tenant_id')
     ARM_SUBSCRIPTION_ID   = credentials('azure_subscription_id')
 }
-    }
+    
 
   stages {
     
